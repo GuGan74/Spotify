@@ -6,7 +6,7 @@ const connection = require("./db");
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 const songRoutes = require("./routes/song");
-const playListRoutes = require("./routes/playlist");
+// const playListRoutes = require("./routes/playlist");
 
 const app = express();
 connection();
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/api/users/", userRoutes);
 app.use("/api/login/", authRoutes);
 app.use("/api/songs/", songRoutes);
-app.use("/api/playlist/", playListRoutes);
+// app.use("/api/playlist/", playListRoutes);
 
 
 const port = process.env.PORT || 4000;
